@@ -1,0 +1,19 @@
+{
+  "name": "urip-rn-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "node-run-cmd": "^1.0.1",
+    "rimraf": "^3.0.2",
+    "yargs": "^16.2.0"
+  }
+}
