@@ -24,21 +24,15 @@ const createProject = async (name, bundle) => {
       const appDir = name.replace(' ', '');
       log('- Cloning project...');
       await nrc.run(`git clone ${repo} ${appDir}`);
-      
-      log('- Move to project directory...')
-      await nrc.run(`cd ${appDir}`);
 
       log('- Installing project dependencies...')
-      await nrc.run(`npm install`);
+      await nrc.run(`cd ${appDir} && npm install`);
       
       log('- Rename project...')
-      await nrc.run(`npx react-native-rename "${name}" -b "${bundle}"`);
+      await nrc.run(`cd ${appDir} && npx react-native-rename "${name}" -b "${bundle}"`);
       
       log('- Initializing git...')
-      await nrc.run(`npx rimraf .git`);
-      await nrc.run(`git init`);
-      await nrc.run(`git add .`);
-      await nrc.run(`git commit -m "Init Project"`);
+      await nrc.run(`cd ${appDir} && npx rimraf .git && git init && git add . && git commit -m "Init Project"`);
 
       console.log(chalk.green('Done'));
       process.exit()
