@@ -1,7 +1,7 @@
 {
   "name": "urip-rn-cli",
-  "version": "1.0.2",
-  "description": "",
+  "version": "1.0.3",
+  "description": "React Native boilerplate maker",
   "main": "index.js",
   "bin": "index.js",
   "scripts": {
