@@ -53,7 +53,7 @@ const createProject = async (name, bundle) => {
          log('- Installing pod...')
          await nrc.run(`cd ${appDir}/ios && pod update`)
       }
-      
+
       console.log(chalk.green('Done'));
       process.exit()
    } catch (error) {
@@ -66,7 +66,7 @@ const getCreateInputByProject = async () => {
    try {
       const name = await input("Enter App Name: ");
       if (!name) throw new Error("App Name is required");
-      const bundle = await input("Enter Bundle Identifier (Ex: 'com.subekti.todoapp'): ");
+      const bundle = await input(`Enter Bundle Identifier (Ex: ${chalk.yellow('com.subekti.todoapp')}): `);
       if (!bundle) throw new Error("Bundle Identifier is required");
       await createProject(name, bundle)
    } catch (error) {
