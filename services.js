@@ -37,7 +37,7 @@ class Services {
          if (!name) throw new Error("App Name is required");
          const bundle = await Utils.input(`Enter Bundle Identifier (Ex: ${chalk.yellow('com.subekti.todoapp')}): `);
          if (!bundle) throw new Error("Bundle Identifier is required");
-         await createProject(name, bundle)
+         await Services.createProject(name, bundle)
       } catch (error) {
          console.log(chalk.red(error.message));
          process.exit()
