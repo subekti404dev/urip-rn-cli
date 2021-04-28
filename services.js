@@ -10,7 +10,7 @@ class Services {
          await Utils.cmd(`git clone ${config.repoURL} ${appDir}`);
 
          Utils.log('- Installing project dependencies...')
-         await Utils.cmd(`cd ${appDir} && npm install`);
+         await Utils.cmd(`cd ${appDir} && npm install --force`);
 
          Utils.log('- Rename project...')
          await Utils.cmd(`cd ${appDir} && npx react-native-rename "${name}" -b "${bundle}"`);
