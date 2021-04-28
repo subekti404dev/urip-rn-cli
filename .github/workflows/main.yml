@@ -23,7 +23,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Install dependencies
-        run: npm ci
+        run: yarn
 
       - name: NPM Publish
         uses: JS-DevTools/npm-publish@v1
