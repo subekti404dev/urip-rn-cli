@@ -24,9 +24,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: Install dependencies
         run: yarn
-        
-      - name: Tez
-        run: echo ${{ secrets.NPM_TOKEN }}
 
       - name: NPM Publish
         uses: JS-DevTools/npm-publish@v1
